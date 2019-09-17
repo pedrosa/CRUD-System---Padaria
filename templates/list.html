@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div class = "jumbotron>"
+    <head>
+        <meta charset="utf-8">
+        <title>Lista de Clientes</title>
+    </head>
+    <body>
+        <h1>Lista de Clientes</h1>
+        <hr>
+        <table border ="5">
+            <tr>
+                <td>ID</td>
+                <td>Nome</td>
+                <td>Data de Nascimento</td>
+                <td>Celular</td>
+                <td>E-mail</td>
+                <td>Gênero</td>
+                <td></td>
+                <td></td>
+              </tr>
+              {% for person in people %}
+              <tr>
+                <td>{{ person.id }}</td>
+                <td>{{ person.name }}</td>
+                <td>{{ person.birthday }}</td>
+                <td>{{ person.telephone }}</td>
+                <td>{{ person.email }}</td>
+                <td>{{ person.gender }}</td>
+                <td><a href="/delete/{{person.id}}">Deletar</a></td>
+                <td><a href="/edit/{{person.id}}">Editar</a></td>
+              </tr>
+              {% endfor %}
+        </table>
+    </body>
+    <body>
+      <a href="{{url_for('index')}}">Voltar</a>
+    </body>
+</div>
+</html>

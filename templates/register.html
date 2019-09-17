@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <head>
+        <meta charset="utf-8">
+        <title>Página de Cadastro</title>
+    </head>
+    <body>
+        <h1>Página de Cadastro</h1>
+        <hr>
+      <form action="{{ url_for('forms')}}" method="POST">
+          <table>
+              <tr>
+                  <td>Nome</td>
+                  <td><input type="text" name="name"</td>
+              </tr>
+              <tr>
+                  <td>Data de nascimento</td>
+                  <td><input type="date" name="birthday"</td>
+              </tr>
+              <tr>
+                  <td>Celular</td>
+                  <td><input type="text" name="telephone"</td>
+              </tr>
+              <tr>
+                  <td>E-mail</td>
+                  <td><input type="text" name="email"</td>
+              </tr>
+              <tr>
+                  <td>Gênero</td>
+                  <td><input type="radio" name="gender" value="Masculino"> Masculino
+                  <input type="radio" name="gender" value="Feminino"> Feminino</td>
+              </tr>
+          </table><br>
+          <input type="submit" value="Cadastrar">
+      </form>
+    </body>
+    <body>
+      <a href="{{url_for('index')}}">Voltar</a>
+    </body>
+</html>

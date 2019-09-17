@@ -47,7 +47,7 @@ def forms():
         email = request.form.get("email")
         gender = request.form.get("gender")
 
-        if name and birthday and telephone and email and gender:
+        if (name and birthday and telephone and email and gender):
             p = Person(name, birthday, telephone, email, gender)
             db.session.add(p)
             db.session.commit()

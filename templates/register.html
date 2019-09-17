@@ -12,24 +12,24 @@
           <table>
               <tr>
                   <td>Nome</td>
-                  <td><input type="text" name="name"</td>
+                  <td><input type="text" name="name" required></td>
               </tr>
               <tr>
                   <td>Data de nascimento</td>
-                  <td><input type="date" name="birthday"</td>
+                  <td><input type="date" name="birthday" required></td>
               </tr>
               <tr>
-                  <td>Celular</td>
-                  <td><input type="text" name="telephone"</td>
+                  <td>Celular (com DDD)</td>
+                  <td><input type="tel" name="telephone" pattern="[0-9]{11}" required></td>
               </tr>
               <tr>
                   <td>E-mail</td>
-                  <td><input type="text" name="email"</td>
+                  <td><input type="email" name="email"</td>
               </tr>
               <tr>
                   <td>Gênero</td>
-                  <td><input type="radio" name="gender" value="Masculino"> Masculino
-                  <input type="radio" name="gender" value="Feminino"> Feminino</td>
+                  <td><input type="radio" name="gender" value="Masculino" required> Masculino
+                  <input type="radio" name="gender" value="Feminino" required> Feminino</td>
               </tr>
           </table><br>
           <input type="submit" value="Cadastrar">

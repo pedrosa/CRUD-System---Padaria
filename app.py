@@ -48,8 +48,8 @@ def forms():
         gender = request.form.get("gender")
 
         if (name and birthday and telephone and email and gender):
-            p = Person(name, birthday, telephone, email, gender)
-            db.session.add(p)
+            person = Person(name, birthday, telephone, email, gender)
+            db.session.add(person)
             db.session.commit()
 
     return redirect(url_for("index"))
@@ -67,10 +67,10 @@ def delete(id):
     db.session.commit()
 
     people = Person.query.all()
-    return render_template("list.html", people=people)
+    return redirect(url_for("list"))
 
 @app.route("/edit/<int:id>", methods=['GET', 'POST'])
-def atualizar(id):
+def edit(id):
     person = Person.query.filter_by(id=id).first()
 
     if request.method == "POST":
@@ -93,6 +93,9 @@ def atualizar(id):
 
     return render_template("edit.html", person=person)
 
+@app.route("/help")
+def help():
+    return render_template("help.html")
 
 
 if __name__ == '__main__':

@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <head>
+  <head>
         <meta charset="utf-8">
         <title>Página de Cadastro</title>
+        <link rel="stylesheet" href="static/css/main.css">
     </head>
     <body>
-        <h1>Página de Cadastro</h1>
+        <h1>Cadastro de Novo Cliente</h1>
         <hr>
+            <div style="background-color:#DEB887; text-align:center; margin-right: 80%">
       <form action="{{ url_for('forms')}}" method="POST">
           <table>
               <tr>
-                  <td>Nome</td>
-                  <td><input type="text" name="name" required></td>
+                  <td><h2>Nome:</h2></td>
+                  <td><input type="text" placeholder="João da Silva" name="name" required></td>
               </tr>
               <tr>
-                  <td>Data de nascimento</td>
+                  <td><h2>Data de nascimento:</h2></td>
                   <td><input type="date" name="birthday" required></td>
               </tr>
               <tr>
-                  <td>Celular (com DDD)</td>
-                  <td><input type="tel" name="telephone" pattern="[0-9]{11}" required></td>
+                  <td><h2>Celular (com DDD):</h2></td>
+                  <td><input type="tel" placeholder="21999999999" name="telephone" pattern="[0-9]{11}" required></td>
               </tr>
               <tr>
-                  <td>E-mail</td>
-                  <td><input type="email" name="email"</td>
+                  <td><h2>E-mail:</h2></td>
+                  <td><input type="email" placeholder="joao@email.com" name="email" required></td>
               </tr>
               <tr>
-                  <td>Gênero</td>
-                  <td><input type="radio" name="gender" value="Masculino" required> Masculino
-                  <input type="radio" name="gender" value="Feminino" required> Feminino</td>
+                  <td><h2>Gênero:</h2></td>
+                  <td><input checked="checked" type="radio" name="gender" id="m" value="Masculino"/>
+                        <label for="m">Masculino</label><br/>
+                        <input type="radio" name="gender" id="f" value="Feminino"/>
+                        <label for="f">Feminino</label><br/></td>
               </tr>
           </table><br>
           <input type="submit" value="Cadastrar">
@@ -38,4 +41,5 @@
     <body>
       <a href="{{url_for('index')}}">Voltar</a>
     </body>
+  </div>
 </html>

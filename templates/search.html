@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block content %}
+<h3>Clientes:</h3>
+<ul>
+    {% for person in person %}
+    <li>
+    <h4><a href="/viewperson?id={{person.id}}">{{person.name}}</a>
+    <a class="btn btn-success" href="/editcourse?id={{course.id}}">Book</a>
+    <a class="btn btn-info" href="/editcourse?id={{course.id}}">Edit</a>
+    <a class="btn btn-danger" href="/deletecourse?id={{course.id}}">Delete</a></h4>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

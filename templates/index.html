@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <head>
         <meta charset="utf-8">
-        <title>Padaria do Seu Zé</title>
+        <title>Padaria do Seu João</title>
+
+        <link rel="stylesheet" href="static/css/main.css">
     </head>
     <body>
-      <div class="jumbotron">
-        <h1>Padaria do Seu Zé</h1>
+        <h1>Padaria do Seu João</h1>
         <hr>
-        <a href="{{url_for('register')}}">Cadastrar Clientes</a>
-        <a href="{{url_for('list')}}">Lista de Clientes</a>
+        <div style="background-color:#DEB887; text-align:left ; margin-right: 80%; display: inline-block;border-style:double;">
+        <p><a href="{{url_for('register')}}">- Cadastrar Clientes</a></p>
+        <p><a href="{{url_for('list')}}">- Lista de Clientes</a></p>
       </div>
+
+        <div style="background-color:#D2B48C; display:contents;">
+        <h3><a href="{{url_for('help')}}">Problemas com o sistema? Fale conosco!</a></h3>
+
+</div>
     </body>
 </html>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <head>
+  <head>
         <meta charset="utf-8">
-        <title>Editar</title>
+        <title>Editar dados do cliente</title>
+        <link rel="stylesheet" href="static/css/main.css">
     </head>
     <body>
-        <h1>Editar</h1>
+        <h1>Editar dados do Cliente</h1>
         <hr>
       <form action="" method="POST">
           <table>
@@ -27,15 +27,16 @@
                   <td><input type="text" name="email" value="{{person.email}}"</td>
               </tr>
               <tr>
-                  <td>Gênero</td>
-                  <td><input type="radio" name="gender" value="Masculino" value="{{person.gender}}"> Masculino
+                  <td>Gênero
+                  <input type="radio" name="gender" value="Masculino" value="{{person.gender}}"> Masculino
                   <input type="radio" name="gender" value="Feminino" value="{{person.gender}}"> Feminino</td>
               </tr>
           </table><br>
           <input type="submit" value="Atualizar Dados">
       </form>
     </body>
+
     <body>
-      <a href="{{url_for('index')}}">Voltar</a>
+      <a href="{{url_for('list')}}">Voltar</a>
     </body>
 </html>

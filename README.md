@@ -7,8 +7,8 @@ It's system developed to register and manage informations from the costumers and
 Before anything, you'll need to install and activate your virtual environment. To do this, follow the steps:
 ```
 - install the virtualenv: $ sudo pip install virtualenv
-- create the virtual environment: $ virtualenv ENV
-- activate the virtual environment: $ source ENV/bin/activate
+- create the virtual environment: $ virtualenv env
+- activate the virtual environment: $ source env/bin/activate
 ```
 
 ## Requirements:

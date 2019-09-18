@@ -11,10 +11,10 @@ Before anything, you'll need to install and activate your virtual environment. T
 - activate the virtual environment: $ source ENV/bin/activate
 ```
 
-With the virtualenv installed and activated, you'll need to download the following libs to run the code:
+## Requirements:
+This project uses Python 3.7. Install the dependencies running:
 ```
-- pip install flask
-- pip install flask_sqlalchemy
+pip install -r requirements.txt
 ```
 
 ## Steps

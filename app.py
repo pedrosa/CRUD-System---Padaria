@@ -38,6 +38,7 @@ def index():
 def register():
     return render_template("register.html")
 
+# why do you handle GET here? what should happen when we GET /forms?
 @app.route("/forms", methods=['GET','POST'])
 def forms():
     if request.method == "POST":
@@ -69,6 +70,8 @@ def delete(id):
     people = Person.query.all()
     return redirect(url_for("list"))
 
+# Generally, handling GET and POST by the same function is not recommended.
+# POST creates a new object, GET reads that object: 2 different purposes => 2 different functions
 @app.route("/edit/<int:id>", methods=['GET', 'POST'])
 def edit(id):
     person = Person.query.filter_by(id=id).first()

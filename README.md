@@ -1,4 +1,4 @@
-# Stone Challenge
+# CRUD Challenge
 CRUD system using python, Flask and HTML with CSS. 
 It's system developed to register and manage informations from the costumers and with this informations send promotions to then.
 
